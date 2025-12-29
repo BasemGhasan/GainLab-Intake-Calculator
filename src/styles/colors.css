@@ -1,0 +1,8 @@
+/* Brand Color Palette */
+:root {
+  --color-primary: #28112b;
+  --color-secondary: #657153;
+  --color-accent: #8aaa79;
+  --color-muted: #837569;
+  --color-background: #f7dba7;
+}
