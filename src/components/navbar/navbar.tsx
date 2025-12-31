@@ -35,12 +35,12 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="/calculator">
+              <a className={`nav-link ${styles.navLink}`} href="/">
                 Calculator
               </a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="/about">
+              <a className={`nav-link ${styles.navLink}`} href="/">
                 About
               </a>
             </li>
