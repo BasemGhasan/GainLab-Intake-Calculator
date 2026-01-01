@@ -1,0 +1,39 @@
+@import "../colors.css";
+
+.infoCard {
+  background-color: var(--color-accent);
+  border: 5px solid var(--color-muted);
+  border-radius: 12px;
+  padding: 12px 0px;
+  transition: transform 0.3s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-10px);
+}
+
+.iconContainer {
+  width: 70px;
+  height: 70px;
+  align-content: center;
+  align-self: center;
+  margin-bottom: 1.5rem;
+  border-radius: 10%;
+  background-color: var(--color-background);
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.cardTitle {
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cardDescription {
+  color: var(--color-white);
+  line-height: 1.6;
+}

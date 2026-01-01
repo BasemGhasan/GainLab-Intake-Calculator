@@ -1,11 +1,25 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../../styles/navbar/navbar.module.css";
 
 const Navbar = () => {
+  const handleSmoothScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
-      <div className="container">
-        <a className="navbar-brand" href="/">
+      <div className={`container ${styles.navbarContainer}`}>
+        <Link className="navbar-brand" href="/">
           <div className={styles.brandContainer}>
             <Image
               src="/assets/logo.png"
@@ -16,7 +30,7 @@ const Navbar = () => {
             />
             <span className={styles.brandText}>GainLab</span>
           </div>
-        </a>
+        </Link>
 
         <button
           className={`navbar-toggler ${styles.toggler}`}
@@ -40,7 +54,11 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="/">
+              <a
+                className={`nav-link ${styles.navLink}`}
+                href="#how-it-works"
+                onClick={(e) => handleSmoothScroll(e, "how-it-works")}
+              >
                 About
               </a>
             </li>

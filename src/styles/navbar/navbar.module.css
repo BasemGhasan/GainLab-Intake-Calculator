@@ -1,8 +1,15 @@
+@import "../colors.css";
+
 .navbar {
   background-color: var(--color-primary);
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.navbarContainer {
+  max-width: 100%;
+  margin: 0px 150px;
 }
 
 .brandContainer {
@@ -18,26 +25,28 @@
 }
 
 .brandText {
-  color: white;
+  color: var(--color-white);
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
 }
 
 .navLink {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-white);
   font-size: 1rem;
   font-weight: 500;
   margin-left: 1.5rem;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease, transform 0.3s ease;;
+  line-height: 1.2;
 }
 
 .navLink:hover {
   color: var(--color-accent);
+  transform: scale(1.1);
 }
 
 .toggler {
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: var(--color-white);
 }
 
 .togglerIcon {
