@@ -1,0 +1,40 @@
+@import "../colors.css";
+
+.calculateSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 55px 0px;
+}
+.sectionTitle {
+    color: var(--color-black);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.indicatorsContainer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--color-primary);
+    padding: 5px 23px;
+    border-radius: 25px;
+}
+.pageIndicator {
+    height: 0px;
+    border-radius: 50px;
+    padding: 7px;
+    background-color: var(--color-white);
+}
+.activeIndicator {
+    background-color: var(--color-accent);
+}
+
+.inactiveIndicator {
+    background-color: var(--color-white);
+}
+.pageCounter {
+    margin: 0px;
+    color: var(--color-white);
+    margin-left: 15px;
+}

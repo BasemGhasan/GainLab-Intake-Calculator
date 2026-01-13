@@ -1,6 +1,8 @@
+@import "../colors.css";
+
 .howItWorksSection {
-  background-color: #28112b;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding-top: 3.5rem;
   padding-bottom: 5rem; 
 }
