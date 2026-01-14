@@ -1,3 +1,4 @@
+import { Button } from "../common";
 import styles from "../../styles/hero/heroTextContent.module.css";
 
 const HeroTextContent = () => {
@@ -20,7 +21,10 @@ const HeroTextContent = () => {
         </p>
       </div>
 
-      <button className={`btn rounded-3 ${styles.ctaButton}`}>Start Now</button>
+      <Button
+        label="Start Now"
+        className={`btn rounded-3 ${styles.ctaButton}`}
+      />
     </div>
   );
 };

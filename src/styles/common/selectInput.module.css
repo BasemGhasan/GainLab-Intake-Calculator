@@ -1,0 +1,49 @@
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selectLabel {
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+  border: 1px solid var(--color-secondary);
+  border-radius: 0.375rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  appearance: none;
+  box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.selectIcon {
+  position: absolute;
+  right: 0.75rem;
+  color: var(--color-black);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.selectInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
