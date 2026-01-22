@@ -1,0 +1,15 @@
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.backButton {
+  flex: 0 0 auto;
+  width: 8rem;
+}
+
+.calculateButton {
+  flex: 1;
+}

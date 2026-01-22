@@ -19,3 +19,12 @@
   border-color: var(--color-accent);
   box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.3);
 }
+
+.primaryBtn {
+  background-color: var(--color-primary);
+}
+
+.primaryBtn:hover {
+  background-color: var(--color-primary);
+  opacity: 0.9;
+}
