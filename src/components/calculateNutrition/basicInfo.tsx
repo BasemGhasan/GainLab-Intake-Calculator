@@ -1,8 +1,14 @@
 "use client";
 import { useState } from "react";
-import { Button, RadioButton, SelectInput } from "../common";
+import { Button, RadioButton, SelectInput, NumberInput } from "../common";
+import type { SelectOption } from "../common/selectInput";
 import sharedStyles from "../../styles/calculateNutrition/shared.module.css";
 import styles from "../../styles/calculateNutrition/basicInfo.module.css";
+
+const genderOptions: SelectOption[] = [
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+];
 
 interface BasicInfoProps {
     setPage: (page: number) => void;
@@ -40,36 +46,48 @@ const BasicInfo = ({ setPage }: BasicInfoProps) => {
             </div>
 
             <div className={sharedStyles.inputGrid}>
-                <SelectInput
+                <NumberInput
                     label="Age"
-                    placeholder="Select age"
+                    placeholder="Enter age"
                     value={age}
                     onChange={setAge}
+                    min={13}
+                    max={99}
                 />
                 <SelectInput
                     label="Gender"
                     placeholder="Select gender"
                     value={gender}
                     onChange={setGender}
+                    options={genderOptions}
                 />
-                <SelectInput
+                <NumberInput
                     label="Weight"
-                    placeholder={measurementType === "metric" ? "kg" : "lbs"}
+                    placeholder="Enter weight"
                     value={weight}
                     onChange={setWeight}
+                    min={20}
+                    max={300}
+                    unit={measurementType === "metric" ? "kg" : "lbs"}
                 />
-                <SelectInput
+                <NumberInput
                     label="Height"
-                    placeholder={measurementType === "metric" ? "cm" : "inches"}
+                    placeholder="Enter height"
                     value={height}
                     onChange={setHeight}
+                    min={100}
+                    max={250}
+                    unit={measurementType === "metric" ? "cm" : "in"}
                 />
                 <div className={sharedStyles.fullWidth}>
-                    <SelectInput
+                    <NumberInput
                         label="Body Fat % (Optional)"
-                        placeholder="Select body fat %"
+                        placeholder="Enter body fat %"
                         value={bodyFat}
                         onChange={setBodyFat}
+                        min={3}
+                        max={50}
+                        unit="%"
                     />
                 </div>
             </div>

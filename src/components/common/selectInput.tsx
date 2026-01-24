@@ -1,12 +1,18 @@
 import { IoChevronDown } from "react-icons/io5";
 import styles from "../../styles/common/selectInput.module.css";
 
+export interface SelectOption {
+    value: string;
+    label: string;
+}
+
 interface SelectInputProps {
     label: string;
     placeholder?: string;
     value: string;
     onChange: (value: string) => void;
     className?: string;
+    options?: SelectOption[];
 }
 
 const SelectInput = ({
@@ -15,6 +21,7 @@ const SelectInput = ({
     value,
     onChange,
     className,
+    options = [],
 }: SelectInputProps) => {
     return (
         <div className={`${styles.selectContainer} ${className || ""}`}>
@@ -25,9 +32,14 @@ const SelectInput = ({
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                 >
-                    <option className={styles.selectOptions} value="" disabled>
+                    <option value="" disabled>
                         {placeholder || "Select..."}
                     </option>
+                    {options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
                 </select>
                 <IoChevronDown className={styles.selectIcon} />
             </div>
