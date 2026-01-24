@@ -25,7 +25,7 @@ const SelectInput = ({
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
                 >
-                    <option value="" disabled>
+                    <option className={styles.selectOptions} value="" disabled>
                         {placeholder || "Select..."}
                     </option>
                 </select>

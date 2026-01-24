@@ -7,4 +7,5 @@
 .actionButton {
   display: flex;
   justify-content: end;
+  margin-top: auto;
 }

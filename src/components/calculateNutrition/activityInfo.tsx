@@ -27,34 +27,36 @@ const ActivityInfo = ({ setPage }: ActivityInfoProps) => {
         <div className={sharedStyles.card}>
             <h3 className={sharedStyles.cardTitle}>Activity & Goal</h3>
 
-            <div className={sharedStyles.inputGrid}>
-                <div className={sharedStyles.fullWidth}>
+            <div className={styles.contentWrapper}>
+                <div className={sharedStyles.inputGrid}>
+                    <div className={sharedStyles.fullWidth}>
+                        <SelectInput
+                            label="Activity Level"
+                            placeholder="Select activity level"
+                            value={activityLevel}
+                            onChange={setActivityLevel}
+                        />
+                    </div>
                     <SelectInput
-                        label="Activity Level"
-                        placeholder="Select your Activity Level"
-                        value={activityLevel}
-                        onChange={setActivityLevel}
+                        label="Exercise Hours (per Week)"
+                        placeholder="Select exercise hours"
+                        value={exerciseHours}
+                        onChange={setExerciseHours}
                     />
-                </div>
-                <SelectInput
-                    label="Exercise Hours (per Week)"
-                    placeholder="Select your Exercise Hours (per Week)"
-                    value={exerciseHours}
-                    onChange={setExerciseHours}
-                />
-                <SelectInput
-                    label="Exercise Type"
-                    placeholder="Select your Exercise Type"
-                    value={exerciseType}
-                    onChange={setExerciseType}
-                />
-                <div className={sharedStyles.fullWidth}>
                     <SelectInput
-                        label="Goal"
-                        placeholder="Select your Goal"
-                        value={goal}
-                        onChange={setGoal}
+                        label="Exercise Type"
+                        placeholder="Select exercise type"
+                        value={exerciseType}
+                        onChange={setExerciseType}
                     />
+                    <div className={sharedStyles.fullWidth}>
+                        <SelectInput
+                            label="Goal"
+                            placeholder="Select your nutrition goal"
+                            value={goal}
+                            onChange={setGoal}
+                        />
+                    </div>
                 </div>
             </div>
 

@@ -1,15 +1,24 @@
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
 .actionButtons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  margin-top: auto;
 }
 
 .backButton {
-  flex: 0 0 auto;
-  width: 8rem;
+  flex: end;
+  max-width: 8rem;
 }
 
 .calculateButton {
-  flex: 1;
+  flex: start;
+  max-width: 14rem;
 }
