@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import styles from "../../styles/howItWorks/infoCard.module.css";
+import styles from "../../styles/aboutSection/infoCard.module.css";
 
 interface InfoCardProps {
   icon: IconType;

@@ -1,15 +1,15 @@
 import Navbar from "../components/navbar";
-import Hero from "../components/hero";
-import HowItWorks from "../components/howItWorks";
+import Home from "../components/homeSection";
+import About from "../components/aboutSection";
 import CalculateNutrition from "../components/calculateNutrition";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Navbar />
       <main>
-        <Hero />
-        <HowItWorks />
+        <Home />
+        <About />
         <CalculateNutrition />
       </main>
     </>
