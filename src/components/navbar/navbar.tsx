@@ -44,12 +44,18 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="/">
+              <a className={`nav-link ${styles.navLink}`}
+                href="#hero"
+                onClick={(e) => handleSmoothScroll(e, "hero")}
+              >
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className={`nav-link ${styles.navLink}`} href="/">
+              <a className={`nav-link ${styles.navLink}`}
+                href="calculate_nutrition"
+                onClick={(e) => handleSmoothScroll(e, "calculate_nutrition")}
+              >
                 Calculator
               </a>
             </li>

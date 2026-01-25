@@ -4,7 +4,7 @@ import styles from "../../styles/hero/hero.module.css";
 
 const Hero = () => {
   return (
-    <section className={styles.heroSection}>
+    <section id="hero" className={styles.heroSection}>
       <div className={`container-fluid ${styles.heroContainer}`}>
         <div className={`row ${styles.heroRow}`}>
           {/* Left Column - Text Content */}

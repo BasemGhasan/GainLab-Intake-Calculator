@@ -7,7 +7,7 @@ import styles from "../../styles/calculateNutrition/calculateNutrition.module.cs
 const CalculateNutrition = () => {
     const [page, setPage] = useState(1);
     return (
-        <section className={styles.calculateSection}>
+        <section id="calculate_nutrition" className={styles.calculateSection}>
             <h2 className={styles.sectionTitle}>Calculate Your Nutrition Needs</h2>
             <div className={styles.indicatorsContainer}>
                 <div
